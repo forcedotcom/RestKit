@@ -313,6 +313,7 @@
 // Setup the NSURLRequest. The request must be prepared right before dispatching
 - (BOOL)prepareURLRequest {
 	[_URLRequest setHTTPMethod:[self HTTPMethod]];
+    [_URLRequest setTimeoutInterval:self.timeoutInterval];
 	[self setRequestBody];
 	[self addHeadersToRequest];
     
